@@ -1,0 +1,331 @@
+:root {
+    --font_color: rgb(255, 255, 255);
+    --page-color:rgb(255, 255, 255);
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+header {
+    position: sticky;
+    margin: -8px;
+    width: 100vw;
+    height: 3.5em;
+    min-height: 3.5em;
+    background-color: rgb(1, 1, 1);
+
+    border: none;
+    -webkit-box-shadow: 0px 4px 16px 3px rgba(48,47,47,0.43);
+    -moz-box-shadow: 0px 4px 16px 3px rgba(48,47,47,0.43);
+    box-shadow: 0px 4px 16px 3px rgba(48,47,47,0.43);
+}
+.container {
+    display: none;
+    cursor: pointer;
+    float: right;
+}
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 3px;
+    background-color: rgb(255, 249, 249);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-8px, 6px);
+    transform: rotate(-45deg) translate(-5px,5px);
+}
+.change .bar2 {opacity: 0;}
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-6px,-7px);
+}
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: inherit;
+    min-width: 320px;
+    width: 60%;
+    margin: auto;
+}
+nav a {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:1em;
+    text-decoration: none;
+    color: var(--font_color);
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 10px;
+}
+nav a:hover{
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-bottom: 4px solid white;
+}
+#welcome-section {
+    width:100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "image hello "
+    "image hello";
+    background-color: var(--page-color);
+}
+#img-1 {
+    margin: auto;
+    max-width: 460px;
+    width: 100%;
+    height: auto;
+    justify-self: flex-start;
+    align-self: center;
+    grid-area: image;
+}
+#hello {
+    align-self:center;
+    font-size: 2.5em;
+    grid-area: hello;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/Humaaans\ -\ Plant\ 1.png");
+    background-size: auto 80%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+#hi{
+    margin-top:20%;
+    font-size: 1.5em;
+}
+#aboutMe {
+    width:100vw;
+    height: 100vh;
+    background-color:  var(--page-color);
+    min-height: auto;
+    display: grid;
+    grid-template-areas:
+    "whoami image2"
+    "whoami image2";
+    align-items: center;
+    max-height: auto;
+}
+#whoami {
+    margin: auto;
+    grid-area: whoami;
+    text-align: center;
+    width: 60%;
+    min-width: 300px;
+    max-width: 500px;
+}
+.heading {
+    font-size: 2em;
+    text-align: center;
+}
+#img-2 {
+    margin: auto;
+    width: 50%;
+    padding: 20% 20% 0% 25%;
+}
+#img-2back {
+    width: 100%;
+    grid-area: image2;
+    background-image: url("img/Dayflow\ -\ Abstract\ 5.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+#skills {
+    width:100vw;
+    height: 100vh;
+    background-color:  var(--page-color);
+    display: grid;
+    grid-template-areas: 
+    "image3 skill skill"
+    "image3 skill skill";
+    align-items: center;
+}
+#img-3 {
+    width: 40vw;
+    margin: auto;
+    grid-area: image3;
+    justify-self: flex-start;
+}
+#skill {
+    width: 90%;
+    grid-area: skill;
+    text-align: center;
+}
+#skill-batch {
+    margin: 5%;
+    padding:5%;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.icon-8 {
+    max-width: 80px;
+    width: 100%;
+    -webkit-box-shadow: 10px 10px 30px -13px rgba(0,0,0,0.52);
+    -moz-box-shadow: 10px 10px 30px -13px rgba(0,0,0,0.52);
+    box-shadow: 10px 10px 30px -13px rgba(0,0,0,0.52);
+}
+#projects {
+    padding-top: 2em;
+    width:100vw;
+    min-height: 100vh;
+    background-color:  var(--page-color);
+    min-height: inherit;
+}
+#projects-div {
+    width:100vw;
+    min-height: inherit;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.project-tile {
+    width: 200px;
+    height:200px;
+    margin: 10px;
+    background: #0600ff;
+    background: linear-gradient(-120deg,#0600ff, #ff00f4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    color: aliceblue;
+    text-align: center;
+
+    box-shadow: 26px 21px 52px 5px rgba(0,0,0,0.73);
+-webkit-box-shadow: 26px 21px 52px 5px rgba(0,0,0,0.73);
+-moz-box-shadow: 26px 21px 52px 5px rgba(0,0,0,0.73);
+}
+a {
+    text-decoration: none;
+}
+#showall {
+    position: relative;
+    left: 47%;
+    background-color: black;
+    color: beige;
+    padding: 20px;
+    border-radius: 12px;
+    border: none;
+    margin-top: 5vw;
+}
+#showall:hover {
+    font-weight: 600;
+    transform: scale(1.1);
+}
+#contact {
+    min-height: inherit;
+    width:100vw;
+    min-height: 100vh;
+    background-color:  var(--page-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contact-div {
+    text-align: center;
+    width: 100%;
+}
+#contact-div h1 {
+    font-size: 3.5em;
+    margin-bottom: 2em;
+}
+#contact-div ul {
+    display: flex;
+    list-style: none;
+    font-size: 2em;
+    justify-content: space-around;
+    align-items: center;
+}
+#contact-div ul li {
+    padding: 10px;
+}
+#contact-div ul li:hover {
+    transform: translate(10px,10px);
+}
+#contact-div ul li a {
+    color: black;
+    text-decoration:underline;
+}
+#whoami p {
+    font-size: 1.2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+footer{
+    width: 100vw;
+    height: 5vh;
+    background-color: black;
+}
+@media (max-width:425px) {
+    #showall {
+        margin-top: 20vw;
+        left:39%;
+    }
+    #skills {
+        grid-template-areas: 
+        "image3"
+        "skill";
+    }
+    #img-3 {
+        width: 100%;
+    }
+    #img-2 {
+        width: 60%;
+    }
+    #hello {
+        justify-self: center;
+    }
+}
+@media (max-width:760px) and (min-width:425px) {
+    
+}
+@media (max-width:770px) {
+    header {
+        min-height: 70px;
+        height: auto;
+    }
+    nav {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        height: 100vh;
+        display: none;
+    }
+    .container {
+        display: block;
+        margin: 20px 30px 20px auto;
+    }
+    #welcome-section {
+        height: max-content;
+        grid-template-areas: 
+    "hello";
+    }
+    #img-1 {
+        display: none;
+    }
+    #hello {
+        justify-self: center;
+        text-align: center;
+        background:none;
+    }
+    #contact-div ul {
+        flex-direction: column;
+    }
+    #aboutMe {
+        grid-template-areas:
+    "image2"
+    "whoami";
+    height: auto;
+    }
+    #img-2 {
+        width: 30%;
+        margin: auto;
+    }
+}
